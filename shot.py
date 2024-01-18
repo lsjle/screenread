@@ -15,7 +15,7 @@ def on_click(x, y, button, pressed):
         return False  # Stop listener
 
 
-def take_screenshot(output_path):
+def take_screenshot():
     # Take a screenshot and save it to the specified output path
     screenshot = ImageGrab.grab(bbox=(x1,y1,x2,y2))
     width, height = screenshot.size
@@ -27,16 +27,13 @@ def take_screenshot(output_path):
     plt.axis('off')  # Turn off axis labels
     plt.show()
 def main():
-    # Specify the path for the screenshot
-    screenshot_path = "/path/to/screenshot.png"
-    
     # Start the mouse listener
     with mouse.Listener(on_click=on_click,suppress=True) as listener:
         print("Click and drag to select a region for the screenshot.")
         listener.join()
 
     # Take a screenshot
-    take_screenshot(screenshot_path)
+    take_screenshot()
 
     # Optional: Wait for a few seconds before the script exits (adjust as needed)
 
