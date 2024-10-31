@@ -6,6 +6,7 @@ Screenread is a software that allows you to take a screenshot and read it in cas
 Clone the repositery and install libs.
 ```sh
 git clone https://github.com/lsjle/screenread.git
+cd screenread
 pip install -r requirements.txt
 ```
 run the script
